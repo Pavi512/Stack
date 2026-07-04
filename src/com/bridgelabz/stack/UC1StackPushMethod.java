@@ -33,9 +33,32 @@ class Stack{
         }
     }
 
+    //Method to push an element from stack
+    public void pop(){
+        if(top == null){
+            return;
+        }
+        else{
+//            int topEle = top.data;
+            top = top.next;
+//            return topEle;
+        }
+    }
+
+    //Method to get peek element in the stack
+    public int peek(){
+        if(top == null){
+            return -1;
+        }
+        else{
+            return top.data;
+        }
+    }
+
     //Display method to print the stack
     public void display(){
         if(top == null){
+            System.out.println("Stack is empty");
             return;
         }
         else{
@@ -59,6 +82,15 @@ public class UC1StackPushMethod {
         s.push(70);
         s.push(30);
         s.push(56);
+        s.display();
+        System.out.println();
+        System.out.println(s.peek());
+        s.pop();
+        System.out.println(s.peek());
+        s.pop();
+        System.out.println(s.peek());
+        s.pop();
+        System.out.println(s.peek());
         s.display();
     }
 }
